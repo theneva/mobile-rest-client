@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" ng-app="usersListApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple users angular client</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body ng-controller="UsersController">
+<div class="container">
+    <ul ng-repeat="user in users">
+        <li>{{user}}</li>
+    </ul>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+</html>
