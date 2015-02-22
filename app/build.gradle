@@ -32,6 +32,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE.txt'
+        pickFirst 'META-INF/NOTICE.txt'
+        pickFirst 'META-INF/notice.txt'
+        pickFirst 'META-INF/license.txt'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -48,5 +55,6 @@ apt {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'org.androidannotations:androidannotations:3.2'
+    compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
     compile 'com.google.code.gson:gson:2.3.1'
 }
